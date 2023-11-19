@@ -76,18 +76,16 @@ class OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation(Operator):
         return {'FINISHED'}
 
 classes = (
-    OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation
+    OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation,
 )
 
 def register():    
     from bpy.utils import register_class
-    cls = OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation
-    # for cls in classes:
+    for cls in classes:
         addon_updater_ops.make_annotations(cls)  # Avoid blender 2.8 warnings.
         register_class(cls)
 
 def unregister():
     from bpy.utils import unregister_class
-    cls = OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation
-    # for cls in reversed(classes):
+    for cls in reversed(classes):
         unregister_class(cls)

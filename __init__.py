@@ -4,7 +4,7 @@ bl_info = {
     "description" : "Provides useful tools creating and exporting IK Animations to FFXIV Skeletons",
     "blender": (2, 80, 0),
     "category": "Object",
-    "version": (0, 0, 1, 0)
+    "version": (0, 0, 1, 1)
 }
 
 import bpy
