@@ -4,7 +4,7 @@ bl_info = {
     "description" : "Provides useful tools creating and exporting IK Animations to FFXIV Skeletons",
     "blender": (2, 80, 0),
     "category": "Object",
-    "version": (0, 0, 1, 3)
+    "version": (0, 0, 1, 4)
 }
 
 import bpy
@@ -37,12 +37,12 @@ class XIE_Addon_Properties(PropertyGroup):
     bl_options = {'REGISTER', 'UNDO'}
         
     ik_rig: PointerProperty(
-        type = bpy.types.Armature,
+        type = bpy.types.Object,
         name = "IK Rig"
         )
         
     fk_rig: PointerProperty(
-        type = bpy.types.Armature,
+        type = bpy.types.Object,
         name = "FFXIV Rig"
         )
      

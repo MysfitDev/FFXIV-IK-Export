@@ -27,10 +27,10 @@ class OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation(Operator):
         fk_rig = xie_tool.fk_rig
 
         bpy.ops.object.mode_set(mode='EDIT')
-        bone_to_duplicate = fk_rig.edit_bones['n_root']
-        fk_rig.edit_bones.active = bone_to_duplicate
-        fk_rig.edit_bones.active.select = True
-        bpy.ops.armature.duplicate_move()
+        bone_to_duplicate = fk_rig.data.edit_bones['n_root']
+        fk_rig.data.edit_bones.active = bone_to_duplicate
+        fk_rig.data.edit_bones.active.select = True
+        bpy.ops.object.duplicate_move()
         
         # #Change to pose mode
         # bpy.ops.object.mode_set(mode='POSE')
