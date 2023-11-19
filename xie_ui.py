@@ -28,7 +28,7 @@ class OBJECT_PT_FFXIV_IK_Export_BakeFKRig(Panel):
         scene = context.scene
         xie_tool = scene.xie_tool
         
-        col = layout.col()
+        col = layout.column()
         col.prop(xie_tool, "ik_rig")
         col.prop(xie_tool, "fk_rig")
         
