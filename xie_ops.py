@@ -33,7 +33,7 @@ class OBJECT_OT_FFXIV_IK_Export_BakeIKAnimation(Operator):
         bpy.ops.object.duplicate()
 
         dupli_obj = bpy.context.object
-        print(dupli_obj.name)
+        dupli_obj.name = ik_action.name.replace("IK", "FFXIV Anim")
 
         bpy.ops.object.mode_set(mode='POSE')
         bpy.ops.nla.bake(frame_start=scene.frame_start, frame_end=scene.frame_end, only_selected=False, visual_keying=True, clear_constraints=True, use_current_action=False, bake_types={'POSE'})
